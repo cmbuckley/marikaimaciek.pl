@@ -1,0 +1,28 @@
+{% assign site_title = site.title | markdownify | strip_html | strip %}
+{% assign page_title = page.title | markdownify | strip_html | strip %}
+{% assign page_description = page.description | default: page.excerpt | markdownify | strip_html | strip %}
+{% assign site_description = site.description | markdownify | strip_html | strip %}
+<head>
+    <meta charset="utf-8">
+    <title>{{ page_title }}{% if page.title %} - {% endif %}{{ site_title }}</title>
+    <meta name="description" content="{{ page_description | default: site_description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="{{ page_title }}{% if page.title %} - {% endif %}{{ site_title }}" />
+    <meta property="og:description" content="{{ page_description | default: site_description }}" />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" type="text/css" media="screen" />
+    <!-- Flexslider -->
+    <link rel="stylesheet" href="css/flexslider/flexslider.css" type="text/css">
+    <!-- Animate -->
+    <link rel="stylesheet" href="css/animate/animate.css" type="text/css">
+    <!-- Countdown -->
+    <link rel="stylesheet" href="css/countdown/jquery.countdown.css" type="text/css">
+    <!-- Font -->
+    <link rel="stylesheet" href="css/fonts/fontello/css/fontello.css" type="text/css" media="screen" />
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" media="screen">
+</head>

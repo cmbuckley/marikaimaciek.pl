@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body>
+    {% include header.html %}
+    <section id="main-slider" class="flexslider fullscreen">
+        <div class="slide-title-outter-wrapper">
+            <div class="slide-title-inner-wrapper">
+                <div class="slide-title align-middle">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+
+                                <div id="slide-couplename-wrapper" class="animation delay1 fadeInUp">
+
+                                    <div id="slide-couplename" class="scale75-onmobile">
+                                        <div id="slide-her-name">
+                                            Marika
+                                        </div>
+                                        <div id="slide-and-text">
+                                            <div id="curve-graphic">
+                                                <img src="images/and-banner.png" alt="">
+                                            </div>
+                                                <div id="and-text">
+                                                &amp;
+                                               </div>
+                                        </div>
+                                        <div id="slide-his-name">
+                                            Maciek
+                                        </div>
+                                    </div>
+                                    <h1 id="slide-other-text" class="animation delay2 fadeInUp">
+                                        pobieramy się!
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul class="slides">
+            <li>
+                <div data-stellar-ratio="0.5" class="slide-image" style="background-image:url(img/couple.jpg); background-position:center 80%;">
+                </div>
+
+                <div class="slide-overlay" style="opacity:0.3"> </div>
+            </li>
+          </ul>
+    </section>
+    <section id="content">
+        {{ content }}
+    </section>
+
+    {% include footer.html %}
+    {% include scripts.html %}
+</body>
+</html>

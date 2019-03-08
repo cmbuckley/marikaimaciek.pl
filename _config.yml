@@ -1,0 +1,38 @@
+title: Marika & Maciek
+description: 14 Sierpień 2019
+host: 0.0.0.0
+
+url: https://marikaimaciek.pl
+baseurl: ""
+repository: cmbuckley/marikaimaciek.pl
+
+markdown: kramdown
+highlighter: rouge
+
+exclude:
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+
+sass:
+  style: compressed
+
+defaults:
+  - scope:
+      type: pages
+    values:
+      og_type: website
+
+navigation:
+ - title: Home
+   url: /
+ - title: CV
+   url: /cv/
+ - title: Contact
+   url: /contact/
+ - title: Blog
+   url: /blog/
+ - title: Interests
+   url: /interests/
+ - title: Projects
+   url: /projects/
