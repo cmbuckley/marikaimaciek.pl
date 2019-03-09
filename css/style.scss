@@ -716,7 +716,7 @@ img.rounded{
     font-weight:700;
     color:$textColor;
     text-align:center;
-    padding-top:16px;
+    padding-top:1px;
 }
 
 .transparent .nav-logo{
@@ -3238,8 +3238,8 @@ a:hover .navbar-setting-button,
 /*===============================================*/
 /* 02. NAV BAR                                        */
 /*===============================================*/
-#nav-bar-sticky-wrapper{
-    height:90px !important;
+#nav-bar.top-bar.stick-it {
+    height:60px;
 }
 
 /* ----------------------------------------------*/
@@ -3435,7 +3435,7 @@ a:hover .navbar-setting-button,
     position:relative;
     float:right;
     font-size:28px;
-    margin-top:30px;
+    margin-top:15px;
     z-index:1000;
 }
 
