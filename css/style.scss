@@ -258,7 +258,7 @@ p.lead{
     font-weight:normal;
 }
 
-a{
+a:link,a:visited{
     text-decoration:none;
     color:$themeColor;
 }
