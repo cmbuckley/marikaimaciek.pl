@@ -1,8 +1,8 @@
 <ul class="slides">
-    {% for slide_image in layout.slide_images %}
+    {% for slide in layout.slide_images %}
     <li>
-        <div data-stellar-ratio="0.5" class="slide-image" style="background-image: url(/img/slides/{{ slide_image }}); background-position: center 80%;"></div>
-        <div class="slide-overlay" style="opacity: 0.3"></div>
+        <div data-stellar-ratio="0.5" class="slide-image" style="background-image: url(/img/slides/{{ slide.image }}); background-position: {{ slide.position | default: "center top" }};"></div>
+        <div class="slide-overlay" style="opacity: {{ slide.overlay | default: 0.3 }}"></div>
     </li>
     {% endfor %}
 </ul>

@@ -26,13 +26,11 @@ defaults:
 navigation:
  - title: Home
    url: /
- - title: CV
-   url: /cv/
- - title: Contact
-   url: /contact/
- - title: Blog
-   url: /blog/
- - title: Interests
-   url: /interests/
- - title: Projects
-   url: /projects/
+ - title: Pare Słów
+   url: /slow
+ - title: Ślub
+   url: /slub
+ - title: Wesele
+   url: /wesele
+ - title: RSVP
+   url: /rsvp

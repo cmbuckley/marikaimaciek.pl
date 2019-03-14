@@ -1,5 +1,5 @@
     <header id="nav-header">
-        <nav id="nav-bar" class="top-bar fluid-width transparent nav-center hide-logo-on-desktop sticky-nav animation fast fadeInDown">
+        <nav id="nav-bar" class="top-bar fluid-width {{ layout.nav_type }} nav-center hide-logo-on-desktop sticky-nav animation fast fadeInDown">
             <div id="nav-wrapper">
                 <div class="logo-wrapper">
                     <div class="nav-logo">M<span class="theme-color">+</span>M</div>
@@ -10,11 +10,10 @@
                 </div>
 
                 <ul id="nav-menu">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/slow">Pare Słów</a></li>
-                    <li><a href="/slub">Ślub</a></li>
-                    <li><a href="/wesele">Wesele</a></li>
-                    <li><a href="/rsvp">RSVP</a></li>
+                    {% for link in site.navigation %}{% assign class = nil %}
+                    {% if page.url contains link.url and link.url != '/' or page.url == '/' %}{% assign class='active' %}{% endif %}
+                    <li><a href="{{ link.url }}" class="{{ class }}">{{ link.title }}</a></li>
+                    {% endfor %}
                 </ul>
 
                 <div class="clearboth"></div>
