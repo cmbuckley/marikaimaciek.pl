@@ -23,8 +23,7 @@
     </section>
 
     {% if layout.map_footer or page.map_footer %}
-      {% assign map_footer = page.map_footer | default: layout.map_footer | prepend: 'maps/' | append: '.html' %}
-      {% include {{ map_footer }} %}
+      {% include map_footer.html  %}
     {% else %}
       {% include footer.html %}
     {% endif %}
