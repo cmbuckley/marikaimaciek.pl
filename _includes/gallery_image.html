@@ -1,4 +1,4 @@
-<div class="col-sm-4 gallery-item">
+<div class="col-sm-{{ include.width | default: 4 }} gallery-item">
     <div class="photo-item frame-border animation fadeInUp">
         <img src="/img/gallery/thumb/{{ include.image }}" alt="{{ include.alt }}" class="hover-animation image-zoom-in">
 

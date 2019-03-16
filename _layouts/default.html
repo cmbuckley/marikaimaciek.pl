@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 {% include head.html %}
 <body>
     {% include header.html %}
@@ -22,7 +22,12 @@
         {{ content }}
     </section>
 
-    {% include footer.html %}
+    {% if layout.map_footer %}
+      {% assign map_footer = layout.map_footer | prepend: 'maps/' | append: '.html' %}
+      {% include {{ map_footer }} %}
+    {% else %}
+      {% include footer.html %}
+    {% endif %}
     {% include scripts.html %}
 </body>
 </html>

@@ -1506,7 +1506,7 @@ hr.line-divider{
     width:100%;
 }
 
-#map-canvas-3{
+#map-canvas-church{
     height:600px;
     width:100%;
 }
@@ -1587,6 +1587,10 @@ hr.line-divider{
      -webkit-animation: scale-animation 2s infinite;
      -moz-animation: scale-animation 2s infinite;
      -o-animation: scale-animation 2s infinite;
+}
+
+.map-footer{
+    position:relative;
 }
 
 /*-----------------------------------------------*/
@@ -1689,7 +1693,9 @@ hr.line-divider{
 }
 
 .section-block h1, .section-block h2, .section-block h3,
-.section-block h4, .section-block h5, .section-block h6 {
+.section-block h4, .section-block h5, .section-block h6,
+.section-block .h1, .section-block .h2, .section-block .h3,
+.section-block .h4, .section-block .h5, .section-block .h6 {
     color: #efe1bc;
 }
 
@@ -1699,7 +1705,9 @@ hr.line-divider{
 }
 
 .section-block.more-grey h1, .section-block.more-grey h2, .section-block.more-grey h3,
-.section-block.more-grey h4, .section-block.more-grey h5, .section-block.more-grey h6 {
+.section-block.more-grey h4, .section-block.more-grey h5, .section-block.more-grey h6,
+.section-block.more-grey .h1, .section-block.more-grey .h2, .section-block.more-grey .h3,
+.section-block.more-grey .h4, .section-block.more-grey .h5, .section-block.more-grey .h6 {
     color: #4a4a4a;
 }
 

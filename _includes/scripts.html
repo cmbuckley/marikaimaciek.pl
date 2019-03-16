@@ -29,3 +29,8 @@
         <script type="text/javascript" src="/js/script.js"></script>
         <!-- Custom Additional Script -->
         <script type="text/javascript" src="/js/main-slider-fade.js"></script>
+        {% if layout.map_footer %}
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6g1ytCY-D5UjInkA_ATJq9TxxjH46ko8"></script>
+        <script src="/js/markerlabel/markerwithlabel.js""></script>
+        <script src="/js/map-{{ layout.map_footer }}.js"></script>
+        {% endif %}
