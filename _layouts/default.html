@@ -3,14 +3,14 @@
 {% include head.html %}
 <body>
     {% include header.html %}
-    <section id="main-slider" class="flexslider {{ layout.slider_type }}">
+    <section id="main-slider" class="flexslider {{ page.slider_type | default: layout.slider_type }}">
         <div class="slide-title-outter-wrapper">
             <div class="slide-title-inner-wrapper">
                 <div class="slide-title align-middle">
                     <div class="container">
                         <div class="row">
-                        {% assign title_name = layout.slide_title | prepend: 'slide_titles/' | append: '.html' %}
-                        {% if layout.slide_title %}{% include {{ title_name }} %}{% endif %}
+                        {% assign title_name = page.slide_title | default: layout.slide_title | prepend: 'slide_titles/' | append: '.html' %}
+                        {% if layout.slide_title or page.slide_title %}{% include {{ title_name }} %}{% endif %}
                         </div>
                     </div>
                 </div>
@@ -22,8 +22,8 @@
         {{ content }}
     </section>
 
-    {% if layout.map_footer %}
-      {% assign map_footer = layout.map_footer | prepend: 'maps/' | append: '.html' %}
+    {% if layout.map_footer or page.map_footer %}
+      {% assign map_footer = page.map_footer | default: layout.map_footer | prepend: 'maps/' | append: '.html' %}
       {% include {{ map_footer }} %}
     {% else %}
       {% include footer.html %}
