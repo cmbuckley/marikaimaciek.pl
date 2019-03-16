@@ -14,7 +14,7 @@
         //DEFINE MAP OPTIONS
         //=======================================================================================
           var mapOptions = {
-            zoom: 17,
+            zoom: 16,
             mapTypeId: google.maps.MapTypeId.ROADMAP,
             center: new google.maps.LatLng(52.478184, 20.556656),
             panControl: true,
@@ -30,16 +30,31 @@
 
         //CREATE NEW MAP
         //=======================================================================================
-          var map = new google.maps.Map(document.getElementById('map-canvas-church'), mapOptions);
+        var map = new google.maps.Map(document.getElementById('map-canvas-church'), mapOptions);
+        var directionsService = new google.maps.DirectionsService;
+        var directionsDisplay = new google.maps.DirectionsRenderer({suppressMarkers: true, preserveViewport: true});
+        directionsDisplay.setMap(map);
+
+        //DIRECTIONS
+        //=======================================================================================
+        directionsService.route({
+            origin: 'Bank Square, 05-077 Warszawa',
+            destination: 'Rzymskokatolicka Parafia św. Jana Chrzciciela w Kroczewie, Kroczewo 12, 09-142',
+            travelMode: 'DRIVING'
+        }, function(response, status) {
+            if (status === 'OK') {
+                directionsDisplay.setDirections(response);
+            }
+        });
 
         //ADD NEW MARKER WITH LABEL
         //=======================================================================================
         var marker1 = new MarkerWithLabel({
-               position: new google.maps.LatLng(52.478184, 20.556656),
-               draggable: false,
-               raiseOnDrag: false,
-               map: map,
-         });
+            position: new google.maps.LatLng(52.478184, 20.556656),
+            draggable: false,
+            raiseOnDrag: false,
+            map: map,
+        });
 
         //INFO WINDOWS 1
         //=======================================================================================
