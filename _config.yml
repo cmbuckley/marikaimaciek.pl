@@ -12,7 +12,6 @@ highlighter: rouge
 exclude:
   - CNAME
   - Gemfile
-  - Gemfile.lock
 
 sass:
   style: compressed
