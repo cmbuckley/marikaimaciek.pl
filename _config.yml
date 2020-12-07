@@ -12,6 +12,7 @@ highlighter: rouge
 exclude:
   - CNAME
   - Gemfile
+  - vendor
 
 sass:
   style: compressed
