@@ -1,3 +1,8 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
+ruby "~> 3.3"
 
-gem 'github-pages', group: :jekyll_plugins
+gem 'jekyll', '~> 4.4'
+
+# liquid former stdlibs
+gem 'base64'
+gem 'bigdecimal'
