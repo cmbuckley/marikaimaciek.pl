@@ -30,7 +30,7 @@
         <!-- Custom Additional Script -->
         <script type="text/javascript" src="/js/main-slider-fade.js"></script>
         {% if layout.map_footer or page.map_footer %}
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6g1ytCY-D5UjInkA_ATJq9TxxjH46ko8"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key={{ site.map_api_key }}"></script>
         <script src="/js/markerlabel/markerwithlabel.js""></script>
         <script src="/js/map-{{ page.map_footer | default: layout.map_footer }}.js"></script>
         {% endif %}

@@ -16,3 +16,6 @@ jobs:
   pages:
     uses: cmbuckley/.github/.github/workflows/pages.yml@main
     secrets: inherit
+    with:
+      custom_commands: |
+        echo "map_api_key: ${{ vars.MAP_API_KEY }}" >> _config.yml
