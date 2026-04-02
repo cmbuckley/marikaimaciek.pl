@@ -2,8 +2,8 @@
 ---
 @charset "utf-8";
 
-@import "config";
-@import "fonts/candlescript";
+@use "config";
+@forward "fonts/candlescript";
 
 /*----------------------
     Stylesheet Guide
@@ -174,8 +174,8 @@
 /*===============================================*/
 body{
     font-family: 'Raleway', sans-serif;
-    color:$textColor;
-    background-color:$backgroundColor;
+    color:config.$textColor;
+    background-color:config.$backgroundColor;
     background: url('/img/bg.jpg') repeat center center fixed;
     font-size:16px;
     line-height:27px;
@@ -193,7 +193,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 
 h1 a:hover, h2 a:hover, h3 a:hover,
 h4 a:hover, h5 a:hover, h6 a:hover{
-    color:$themeColor;
+    color:config.$themeColor;
 }
 
 h1, .h1{
@@ -260,7 +260,7 @@ p.lead{
 
 a:link,a:visited{
     text-decoration:none;
-    color:$themeColor;
+    color:config.$themeColor;
 }
 
 a.grey-link{
@@ -273,7 +273,7 @@ a.with-underline{
 
 a:hover{
     text-decoration:none;
-    color:$themeColor;
+    color:config.$themeColor;
 }
 
 .clearboth{
@@ -309,7 +309,7 @@ img.rounded{
 }
 
 .theme-color{
-    color:$themeColor;
+    color:config.$themeColor;
 }
 
 .paragraph-row-wrapper{
@@ -502,7 +502,7 @@ img.rounded{
       font-weight: normal;
       font-size:10px;
     content: '\e9bd';
-    color:$themeColor;
+    color:config.$themeColor;
     text-align:center;
 }
 
@@ -512,7 +512,7 @@ img.rounded{
 }*/
 
 #nav-menu > li a{
-    color:$textColor;
+    color:config.$textColor;
     text-decoration:none;
 }
 
@@ -526,7 +526,7 @@ img.rounded{
 
 #nav-menu > li > a:hover,
 #nav-menu > li > a.active{
-    /*color:$themeColor;*/
+    /*color:config.$themeColor;*/
     border-color:#b3b3b3;
 }
 
@@ -543,7 +543,7 @@ img.rounded{
 }
 
 .transparent.stick-it #nav-menu > li > a{
-    color:$textColor;
+    color:config.$textColor;
 }
 
 .transparent.stick-it #nav-menu > li > a:hover,
@@ -617,7 +617,7 @@ img.rounded{
 
 #nav-menu ul li a:hover,
 #nav-menu ul li a.active{
-    color:$themeColor;
+    color:config.$themeColor;
 }
 
 /* 03.2.1 Transparent Child                         */
@@ -631,12 +631,12 @@ img.rounded{
 }
 
 .transparent #nav-menu ul li a{
-    color:$textColor;
+    color:config.$textColor;
 }
 
 .transparent #nav-menu ul li a:hover,
 .transparent #nav-menu ul li a.active{
-    color:$themeColor;
+    color:config.$themeColor;
 }
 
 /* 03.2.2 Child-Parent Arrow                      */
@@ -694,7 +694,7 @@ img.rounded{
 
 #mobile-nav,
 .transparent.stick-it #mobile-nav{
-    color:$textColor;
+    color:config.$textColor;
 }
 
 .transparent #mobile-nav{
@@ -714,7 +714,7 @@ img.rounded{
     font-size:22px;
     letter-spacing:2px;
     font-weight:700;
-    color:$textColor;
+    color:config.$textColor;
     text-align:center;
     padding-top:1px;
 }
@@ -724,13 +724,13 @@ img.rounded{
 }
 
 .transparent.stick-it .nav-logo{
-    color:$textColor;
+    color:config.$textColor;
 }
 
 .nav-logo.rounded{
     width:100%;
     height:100%;
-    background-color:$themeColor;
+    background-color:config.$themeColor;
     border-radius:50%;
     font-size:18px;
     color:#FFF;
@@ -771,7 +771,7 @@ img.rounded{
 }
 
 .transparent.stick-it .wedding-logo{
-    color:$textColor;
+    color:config.$textColor;
 }
 
 .line-1{
@@ -802,7 +802,7 @@ img.rounded{
 .transparent.stick-it .line-2,
 .block-color .line-1,
 .block-color .line-2{
-    border-color:$textColor;
+    border-color:config.$textColor;
 }
 
 .his-initial{
@@ -829,7 +829,7 @@ img.rounded{
     font-size:11px;
     top:2px;
     left:26px;
-    color:$themeColor;
+    color:config.$themeColor;
 }
 
 .bottom-heart{
@@ -839,7 +839,7 @@ img.rounded{
     font-size:11px;
     bottom:2px;
     left:26px;
-    color:$themeColor;
+    color:config.$themeColor;
 }
 
 /* ----------------------------------------------*/
@@ -921,7 +921,7 @@ img.rounded{
 
 #main-slider .flex-control-nav li a.flex-active,
 #main-slider .flex-control-nav li a:hover {
-    background-color:$themeColor;
+    background-color:config.$themeColor;
 }
 
 #main-slider.flexslider .flex-direction-nav .flex-prev { left: 0px; }
@@ -937,7 +937,7 @@ img.rounded{
 }
 
 #main-slider .flex-direction-nav a:hover {
-    color:$themeColor;
+    color:config.$themeColor;
 }
 
 /* ----------------------------------------------*/
@@ -1611,7 +1611,7 @@ hr.line-divider{
 .box-countdown.is-countdown {
     background-color:transparent;
     border:none;
-    color:$textColor;
+    color:config.$textColor;
 }
 
 .box-countdown .countdown-section{
@@ -1661,7 +1661,7 @@ hr.line-divider{
 }
 
 .circle-countdown .countdown-amount {
-    background-color:$themeColor;
+    background-color:config.$themeColor;
     color:#FFF;
     width:100px;
     height:100px;
@@ -1952,34 +1952,34 @@ hr.line-divider{
 /* 08.2.1 Default                                  */
 /*------------------------------------------------*/
 .de-icon{
-    color:$themeColor;
+    color:config.$themeColor;
 }
 
 .de-icon.square, .de-icon.circle, .de-icon.rounded{
-    background-color:$themeColor;
+    background-color:config.$themeColor;
     color:#FFF;
-    /*border:1px solid $themeColor;*/
+    /*border:1px solid config.$themeColor;*/
 }
 
 .de-icon.outline{
     background-color:transparent;
-    color:$themeColor;
+    color:config.$themeColor;
     border:1px solid;
 }
 
 .de-icon.outline.dark-1{
     background-color:transparent;
-    color:$textColor;
+    color:config.$textColor;
     border:1px solid;
 }
 
 a:hover .de-icon{
-    color:$themeColorLight;
+    color:config.$themeColorLight;
 }
 
 a:hover .de-icon.square, a:hover .de-icon.circle, a:hover .de-icon.rounded, a:hover .de-icon.outline{
     color:#FFF;
-    background-color:$themeColorLight;
+    background-color:config.$themeColorLight;
 }
 
 
@@ -1991,7 +1991,7 @@ a:hover .de-icon.square, a:hover .de-icon.circle, a:hover .de-icon.rounded, a:ho
 
 .de-icon.light-1.square, .de-icon.light-1.circle, .de-icon.light-1.rounded{
     background-color:#FFF;
-    color:$themeColor;
+    color:config.$themeColor;
     border:1px solid #FFF;
 }
 
@@ -2002,13 +2002,13 @@ a:hover .de-icon.square, a:hover .de-icon.circle, a:hover .de-icon.rounded, a:ho
 }
 
 a:hover .de-icon.light-1    {
-    color:$themeColor;
+    color:config.$themeColor;
 }
 
 a:hover .de-icon.light-1.square, a:hover .de-icon.light-1.circle, a:hover .de-icon.light-1.rounded, a:hover .de-icon.light-1.outline{
     color:#FFF;
-    background-color:$themeColor;
-    border-color: $themeColor;
+    background-color:config.$themeColor;
+    border-color: config.$themeColor;
 }
 
 /* 08.2.3 Light-2                          */
@@ -2019,7 +2019,7 @@ a:hover .de-icon.light-1.square, a:hover .de-icon.light-1.circle, a:hover .de-ic
 
 .de-icon.light-2.square, .de-icon.light-2.circle, .de-icon.light-2.rounded{
     background-color:#FFF;
-    color:$textColor;
+    color:config.$textColor;
     border:1px solid #FFF;
 }
 
@@ -2030,13 +2030,13 @@ a:hover .de-icon.light-1.square, a:hover .de-icon.light-1.circle, a:hover .de-ic
 }
 
 a:hover .de-icon.light-2    {
-    color:$textColor;
+    color:config.$textColor;
 }
 
 a:hover .de-icon.light-2.square, a:hover .de-icon.light-2.circle, a:hover .de-icon.light-2.rounded, a:hover .de-icon.light-2.outline{
     color:#FFF;
-    background-color:$themeColor;
-    border-color: $themeColor;
+    background-color:config.$themeColor;
+    border-color: config.$themeColor;
 }
 
 
@@ -2114,23 +2114,23 @@ a.de-button, span.de-button, input[type=submit]{
     margin:0 auto;
     margin-top:20px;
     margin-right:10px;
-    background-color:$themeColor;
+    background-color:config.$themeColor;
     color:#FFF;
     font-family: 'Montserrat', sans-serif;
     font-weight:400;
-    border:solid 1px $themeColor;
+    border:solid 1px config.$themeColor;
     text-decoration:none
 }
 
 a.de-button.outline, span.de-button.outline, input[type=submit].outline{
     background-color:transparent;
-    border:solid 1px $themeColor;
-    color:$themeColor;
+    border:solid 1px config.$themeColor;
+    color:config.$themeColor;
 }
 
 a.de-button:hover, input[type=submit]:hover{
-    background-color:$themeColorLight;
-    border-color: $themeColorLight;
+    background-color:config.$themeColorLight;
+    border-color: config.$themeColorLight;
     color:#FFF;
     text-decoration:none;
 }
@@ -2139,13 +2139,13 @@ a.de-button:hover, input[type=submit]:hover{
 /* ---------------------------------------------- */
 a.de-button.outline.dark-1, span.de-button.outline.dark-1, input[type=submit].outline.dark-1{
     background-color:transparent;
-    border:solid 1px $textColor;
-    color:$textColor;
+    border:solid 1px config.$textColor;
+    color:config.$textColor;
 }
 
 a.de-button.outline.dark-1:hover, span.de-button.outline.dark-1:hover, input[type=submit].outline.dark-1:hover{
-    background-color:$themeColorLight;
-    border-color: $themeColorLight;
+    background-color:config.$themeColorLight;
+    border-color: config.$themeColorLight;
     color:#FFF;
     text-decoration:none;
 }
@@ -2155,7 +2155,7 @@ a.de-button.outline.dark-1:hover, span.de-button.outline.dark-1:hover, input[typ
 
 a.de-button.light-1, span.de-button.light-1, input[type=submit].light-1{
     background-color:#FFF;
-    color:$themeColor;
+    color:config.$themeColor;
     border:solid 1px #FFF;
 }
 
@@ -2166,8 +2166,8 @@ a.de-button.outline.light-1, span.de-button.outline.light-1, input[type=submit].
 }
 
 a.de-button.light-1:hover, input[type=submit].light-1:hover{
-    background-color:$themeColor;
-    border-color: $themeColor;
+    background-color:config.$themeColor;
+    border-color: config.$themeColor;
     color:#FFF;
     text-decoration:none;
 }
@@ -2176,7 +2176,7 @@ a.de-button.light-1:hover, input[type=submit].light-1:hover{
 /* ----------------------------------------------*/
 a.de-button.light-2, span.de-button.light-2, input[type=submit].light-2{
     background-color:#FFF;
-    color:$textColor;
+    color:config.$textColor;
     border:solid 1px #FFF;
 }
 
@@ -2187,8 +2187,8 @@ a.de-button.outline.light-2, span.de-button.outline.light-2, input[type=submit].
 }
 
 a.de-button.light-2:hover, input[type=submit].light-2:hover{
-    background-color:$themeColor;
-    border-color: $themeColor;
+    background-color:config.$themeColor;
+    border-color: config.$themeColor;
     color:#FFF;
     text-decoration:none;
 }
@@ -2664,8 +2664,8 @@ form .btn-primary.focus,
 form .btn-primary:active,
 form .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
-    background-color:$themeColor;
-    border-color:$themeColor;
+    background-color:config.$themeColor;
+    border-color:config.$themeColor;
     color:#FFF;
      border-color: #cccccc;
 }
@@ -2738,7 +2738,7 @@ option{
 }
 
 .message .bg-danger{
-    background-color:$themeColor;
+    background-color:config.$themeColor;
 }
 
 .message .bg-success{
@@ -2907,7 +2907,7 @@ footer .image-divider.fixed-height{
 }
 
 #arrow-up-mobile a:hover{
-    background-color:$themeColor;
+    background-color:config.$themeColor;
     color:#FFF;
 }
 
@@ -2944,7 +2944,7 @@ footer .image-divider.fixed-height{
     width:100%;
     height:100%;
     background-color:#FFF;
-    color:$themeColor;
+    color:config.$themeColor;
     border-radius:50%;
 }
 
@@ -3017,7 +3017,7 @@ footer .image-divider.fixed-height{
     position:relative;
     height:80px;
     width:80px;
-    background-color:$themeColor;
+    background-color:config.$themeColor;
     border-radius:50%;
     margin:0 auto;
 }
@@ -3165,7 +3165,7 @@ footer .image-divider.fixed-height{
     border:1px solid #CCC;
     padding:4px 16px;
     font-size:16px;
-    color:$textColor;
+    color:config.$textColor;
 }
 
 .navbar-setting-button{
@@ -3173,7 +3173,7 @@ footer .image-divider.fixed-height{
     border:1px solid #CCC;
     padding:8px 15px;
     font-size:16px;
-    color:$textColor;
+    color:config.$textColor;
 }
 
 .setting-info{
@@ -3187,9 +3187,9 @@ footer .image-divider.fixed-height{
 a:hover .pattern-setting-button,
 a:hover .navbar-setting-button,
 #reset-color:hover span{
-    background-color:$themeColor;
+    background-color:config.$themeColor;
     color:#FFF;
-    border-color:$themeColor;
+    border-color:config.$themeColor;
 }
 
 
@@ -3349,7 +3349,7 @@ a:hover .navbar-setting-button,
     display:block;
     width:100%;
     margin:0;
-    color:$textColor;
+    color:config.$textColor;
     /*border-bottom:solid thin #f4f2f2;*/
     border:none !important;
     border-bottom:solid thin #dcdcdc !important;
@@ -3358,17 +3358,17 @@ a:hover .navbar-setting-button,
 }
 
 .transparent #nav-menu li a{
-    color:$textColor;
+    color:config.$textColor;
 }
 
 #nav-menu li a:hover{
-    background-color:$themeColor !important;
+    background-color:config.$themeColor !important;
     color:#FFF !important;
 }
 
 #nav-menu li a.active,
 .transparent #nav-menu li a.active{
-    color:$themeColor;
+    color:config.$themeColor;
     background-color:#FFF;
 }
 
@@ -3461,7 +3461,7 @@ a:hover .navbar-setting-button,
 }
 
 .transparent.stick-it #mobile-nav{
-    color:$textColor;
+    color:config.$textColor;
 }
 
 
